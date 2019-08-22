@@ -1,0 +1,90 @@
+function quotesGeneratorMain() {
+    
+    var quotesBeginning  = [
+  "Life is ",
+  "People are ",
+  "Love is "
+]
+
+var quotesMiddle = [
+  "like box of chocolates ",
+  "always the same ",
+  "never "
+]
+
+var quotesEnding = [
+  "never going to change.",
+  "pass with time.",
+  "will end."
+]
+
+    function quotesGenerator() {
+      var randomBeginning = Math.floor(Math.random() * (quotesBeginning.length));
+      var randomMiddle = Math.floor(Math.random() * (quotesMiddle.length));
+      var randomEnding = Math.floor(Math.random() * (quotesEnding.length));
+      
+      return quotesBeginning[randomBeginning] + quotesMiddle[randomMiddle] + quotesEnding[randomEnding]; 
+    }
+
+var quotesBeginning2  = [
+  "Family is ",
+  "Adversity is ",
+  "Pain is "
+]
+
+var quotesMiddle2 = [
+  "like house of cards ",
+  "like bag of fresh air ",
+  "changing your mind and "
+]
+
+var quotesEnding2 = [
+  "never going to change.",
+  "pass with time.",
+  "will end."
+]
+
+    function quotesGenerator2() {
+      var randomBeginning = Math.floor(Math.random() * (quotesBeginning2.length));
+      var randomMiddle = Math.floor(Math.random() * (quotesMiddle2.length));
+      var randomEnding = Math.floor(Math.random() * (quotesEnding2.length));
+      
+      return quotesBeginning2[randomBeginning] + quotesMiddle2[randomMiddle] + quotesEnding2[randomEnding]; 
+    }
+    
+    var generator = prompt('Please choose quotes category:', 'Write 1 for first or 2 for second');
+      if(generator == 1) {
+        var sentences = prompt('Please write number of quotes you wish to display:', 'Number between 1 - 5');
+        var i;
+        for (i = 1; i <= sentences; i++) {
+          console.log(quotesGenerator());   
+        }
+        
+      } else {
+        var sentences2 = prompt('Please write number of quotes you wish to display:', 'Number between 1 - 5');
+         var i;
+        for (i = 0; i < sentences2; i++) {
+          console.log(quotesGenerator2());
+        }
+        var quit2 = prompt('Would like to quit or get some more quotes?', 'Write quit to quit or more to get some more quotes.')
+        if (quit2 == 'quit') {
+          var text2 = 'Goodbye'
+          console.log(text2)
+        } else if (quit2 == 'more') {
+            console.log(quotesGeneratorMain());      
+        }
+      }
+     
+  }
+
+console.log(quotesGeneratorMain());
+
+//         
+
+var quit = prompt('Would like to quit or get some more quotes?', 'Write quit to quit or more to get some more quotes.')
+        if (quit == 'quit') {
+          var text = 'Goodbye'
+          console.log(text)
+        } else if (quit == 'more') {
+            console.log(quotesGeneratorMain());      
+        }
